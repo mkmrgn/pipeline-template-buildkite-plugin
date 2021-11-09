@@ -4,10 +4,15 @@ set -euo pipefail
 
 if [ -z "$BUILDKITE_PLUGIN_PIPELINE_TEMPLATE_TEAM" ]
 then
-  echo "Plugin 'team' parameter must be set"
+  echo "Plugin 'team' parameter must be set.  Stopping build."
+  exit
 else
-  TEAM=$BUILDKITE_PLUGIN_PIPELINE_TEMPLATE_TEAM
-  echo $TEAM
+  TEAM_FILE_URL=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../team-steps/$BUILDKITE_PLUGIN_PIPELINE_TEMPLATE_TEAM
+  if test -f "$TEAM_FILE_URL"; then
+    echo "Team step definitions located"
+  else
+    echo "Team step definitions couldn't be located.  Stopping build."
+    exit
 fi
 
 # contruct the pipeline
@@ -15,6 +20,5 @@ cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/header.yml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-pre.yml >> output.yaml
 cat .buildkite/pipeline.yaml >> output.yaml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-post.yml >> output.yaml
-cat output.yaml
 cat output.yaml | buildkite-agent pipeline upload
 
