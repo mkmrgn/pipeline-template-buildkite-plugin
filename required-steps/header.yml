@@ -1,2 +1,3 @@
 steps:
   - label: ":construction_worker: Constructing pipeline"
+    command: "echo 'Dynamic pipeline generation occurring'
