@@ -3,6 +3,7 @@
 set -euo pipefail
 
 DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
-echo lol
 echo $DIR
-echo lol
+
+DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )")"
+echo $DIR
