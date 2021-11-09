@@ -13,6 +13,7 @@ else
   else
     echo "Team step definitions couldn't be located.  Stopping build."
     exit
+  fi
 fi
 
 # contruct the pipeline
