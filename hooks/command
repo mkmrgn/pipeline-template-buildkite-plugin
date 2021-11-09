@@ -10,7 +10,8 @@ else
   echo $TEAM
 fi
 
-echo "steps:" > output.yaml
+# contruct the pipeline
+cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/header.yml > output.yaml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-pre.yml >> output.yaml
 cat .buildkite/pipeline.yaml >> output.yaml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-post.yml >> output.yaml
