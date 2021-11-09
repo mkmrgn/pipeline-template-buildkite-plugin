@@ -1,0 +1,9 @@
+name: Pipeline Template
+description: Defines a pipeline with some fixed steps
+author: https://github.com/mkmrgn
+requirements: []
+configuration:
+  properties:
+    team:
+      type: string
+  additionalProperties: false
