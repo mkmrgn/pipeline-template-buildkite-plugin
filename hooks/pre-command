@@ -2,9 +2,7 @@
 
 set -euo pipefail
 
-pwd
-ls
-cat .buildkite/pipeline.yaml
-
 DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+echo lol
 echo $DIR
+echo lol
