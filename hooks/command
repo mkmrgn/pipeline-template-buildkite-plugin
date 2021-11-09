@@ -4,5 +4,5 @@ set -euo pipefail
 
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps-pre.yml > output.yaml
 cat .buildkite/pipeline.yaml >> output.yaml
-cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps-post.yml > output.yaml
+cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps-post.yml >> output.yaml
 cat output.yaml
