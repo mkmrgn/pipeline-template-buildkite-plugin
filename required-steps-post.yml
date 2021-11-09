@@ -1,0 +1,2 @@
+  - label: ":cop: Required step 2"
+    command: "echo 'Some required steps are executed here, after the build process'"
