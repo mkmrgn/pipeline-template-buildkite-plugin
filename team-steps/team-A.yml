@@ -1,0 +1,2 @@
+  - label: :a: Mandatory steps for Team A
+    command: "echo 'These steps only execute for Team A'"
