@@ -5,5 +5,4 @@ set -euo pipefail
 DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 echo $DIR
 
-DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )")"
-echo $DIR
+cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps-pre.yml
