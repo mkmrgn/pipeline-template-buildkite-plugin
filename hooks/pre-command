@@ -2,4 +2,6 @@
 
 set -euo pipefail
 
+pwd
+ls
 cat .buildkite/pipeline.yaml
