@@ -14,5 +14,6 @@ echo "steps:" > output.yaml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-pre.yml >> output.yaml
 cat .buildkite/pipeline.yaml >> output.yaml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-post.yml >> output.yaml
+cat output.yaml
 cat output.yaml | buildkite-agent pipeline upload
 
