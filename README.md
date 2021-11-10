@@ -10,7 +10,7 @@ Add the following to your `pipeline.yml`:
 steps:
   - plugins:
       - mkmrgn/pipeline-template-buildkite-plugin:
-          team: [team name]
+          team: team-A
 ```
 
 ## Configuration
