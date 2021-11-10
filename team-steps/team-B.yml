@@ -1,3 +1,4 @@
+  # Enforced steps for Team B
   - label: ":b: Mandatory steps for Team B"
     command: "echo 'These steps only execute for Team B'"
 
