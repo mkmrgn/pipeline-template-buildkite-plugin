@@ -23,4 +23,4 @@ cat $TEAM_FILE_URL >> output.yaml
 cat .buildkite/pipeline.yaml >> output.yaml
 cat $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/../required-steps/required-steps-post.yml >> output.yaml
 cat output.yaml | buildkite-agent pipeline upload
-
+cat output.yaml | buildkite-agent annotate
