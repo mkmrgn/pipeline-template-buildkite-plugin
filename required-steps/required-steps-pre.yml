@@ -1,4 +1,4 @@
 
-  - label: ":cop: Required step 1 (these run for everyone)"
-    command: "echo 'Some required steps are executed here, at the start of the build process'"
+  - label: ":cop: Required step(s)"
+    command: "echo 'Some required steps are executed here. These are defined in the plugin repo'"
 
